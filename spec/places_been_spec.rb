@@ -22,4 +22,12 @@ describe(Place) do
       expect(Place.all()).to(eq([test_place]))
     end
   end
+
+  describe('.clear') do
+    it('clears out the array of saved places') do
+      Place.new('North Korea').save()
+      Place.clear()
+      expect(Place.all()).to(eq([]))
+    end
+  end
 end
