@@ -2,6 +2,10 @@ require('rspec')
 require('places_been')
 
 describe(Place) do
+  before() do
+    Place.clear()
+  end
+
   describe("#place_name") do
     it("adds the name of the place") do
       test_place = Place.new("Shenaniganistan")
