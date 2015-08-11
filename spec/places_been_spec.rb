@@ -14,4 +14,12 @@ describe(Place) do
       expect(Place.all()).to(eq([]))
     end
   end
+
+  describe("#save") do
+    it('saves places to all places array') do
+      test_place = Place.new("Iran")
+      test_place.save()
+      expect(Place.all()).to(eq([test_place]))
+    end
+  end
 end
